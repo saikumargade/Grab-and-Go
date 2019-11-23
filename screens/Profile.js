@@ -2,17 +2,17 @@ import React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
 import { Icon } from "native-base";
 
-export default class Home extends React.Component {
+export default class Profile extends React.Component {
   static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => <Icon name="home" />
+    tabBarIcon: ({ tintColor }) => <Icon name="person" />
   };
   render() {
     return (
       <View style={styles.container}>
-        <Text>Home screen</Text>
+        <Text>Profile screen</Text>
         {/* <Button
           title="go to profile"
-          onPress={() => this.props.navigation.navigate("ProfileScreen")}
+          onPress={() => this.props.navigation.navigate("ProfilePage")}
         /> */}
       </View>
     );
