@@ -6,6 +6,10 @@ import { createBottomTabNavigator } from "react-navigation-tabs";
 import Home from "./screens/Home";
 import Profile from "./screens/Profile";
 import Cart from "./screens/Cart";
+import Signin from "./screens/Signin";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import isLogged from "./reducers/isLogged";
 
 // export default function App() {
 //   return (
@@ -24,18 +28,24 @@ import Cart from "./screens/Cart";
 //     initialRouteName: "HomeScreen"
 //   }
 // );
-
+const store = createStore(isLogged);
 const TabScreens = createBottomTabNavigator(
   {
     Home: Home,
     Cart: Cart,
-    Profile: Profile
+    Profile: Profile,
+    Signin: Signin
   },
   {
     initialRouteName: "Home"
   }
 );
-
+// const App = () => createAppContainer(TabScreens);
+// export default (
+//   <Provider store={store}>
+//     <App />
+//   </Provider>
+// );
 export default createAppContainer(TabScreens);
 
 const styles = StyleSheet.create({

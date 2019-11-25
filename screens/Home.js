@@ -42,6 +42,25 @@ export default class Home extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <TouchableOpacity style={styles.topLocation}>
+          <View>
+            <Icon
+              name="navigate"
+              style={{
+                fontSize: 25,
+                color: "green",
+                marginLeft: 5,
+                marginTop: 5
+              }}
+            />
+          </View>
+          <View style={{ marginLeft: 10 }}>
+            <Text style={{ fontSize: 10, color: "gray" }}>
+              Selected Location
+            </Text>
+            <Text style={{ fontWeight: "200" }}>Gachibowli,Hyderabad</Text>
+          </View>
+        </TouchableOpacity>
         {/* <Text>Home screen</Text> */}
         {/* <Container>
           <Item>
@@ -106,12 +125,6 @@ export default class Home extends React.Component {
           // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
           // renderRightButton={() => <Text>Custom text after the input</Text>}
         />
-        <Text>hello</Text>
-        <Text>hello</Text>
-        <Text>hello</Text>
-        <Text>hello</Text>
-        <Text>hello</Text>
-        <Text>hello</Text>
       </View>
     );
   }
@@ -125,5 +138,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginTop: 25,
     paddingHorizontal: 10
+  },
+  topLocation: {
+    flexDirection: "row",
+    marginBottom: 5
   }
 });
