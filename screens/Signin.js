@@ -11,6 +11,7 @@ import {
   Button
 } from "native-base";
 import { Input } from "galio-framework";
+import Payment from "./Payment";
 
 export default class Signin extends React.Component {
   static navigationOptions = {
@@ -36,7 +37,10 @@ export default class Signin extends React.Component {
                   paddingLeft: 28
                 }}
               >
-                <Text> Signin </Text>
+                <Text onPress={() => this.props.navigation.navigate("Home")}>
+                  {" "}
+                  Signin{" "}
+                </Text>
               </Button>
             </Form>
           </Content>

@@ -40,13 +40,22 @@ const TabScreens = createBottomTabNavigator(
     initialRouteName: "Home"
   }
 );
-// const App = () => createAppContainer(TabScreens);
+const Tabs = createAppContainer(TabScreens);
+
+export default function App() {
+  return (
+    <Provider store={store}>
+      <Tabs />
+    </Provider>
+  );
+}
+
 // export default (
 //   <Provider store={store}>
 //     <App />
 //   </Provider>
 // );
-export default createAppContainer(TabScreens);
+// export default createAppContainer(TabScreens);
 
 const styles = StyleSheet.create({
   container: {

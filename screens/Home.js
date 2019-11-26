@@ -5,10 +5,12 @@ import {
   StyleSheet,
   Alert,
   TouchableOpacity,
-  Image
+  ScrollView,
+  SafeAreaView
 } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { Container, Button, Item, Input, Icon } from "native-base";
+import StoreDisp from "../components/StoreDisp";
 
 const homePlace = {
   description: "Home",
@@ -40,6 +42,9 @@ export default class Home extends React.Component {
     tabBarIcon: ({ tintColor }) => <Icon name="home" />
   };
   render() {
+    if (true) {
+      this.props.navigation.navigate("Signin");
+    }
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.topLocation}>
@@ -125,6 +130,18 @@ export default class Home extends React.Component {
           // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
           // renderRightButton={() => <Text>Custom text after the input</Text>}
         />
+        <ScrollView style={{ marginTop: 50 }}>
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+          <StoreDisp />
+        </ScrollView>
       </View>
     );
   }
@@ -135,6 +152,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     // alignItems: "center",
+    height: 100,
     justifyContent: "center",
     marginTop: 25,
     paddingHorizontal: 10
