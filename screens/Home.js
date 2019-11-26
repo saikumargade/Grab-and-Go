@@ -11,7 +11,7 @@ import {
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { Container, Button, Item, Input, Icon } from "native-base";
 import StoreDisp from "../components/StoreDisp";
-import { withNavigation } from "react-navigation";
+import stores from "../components/FakeData";
 
 const homePlace = {
   description: "Home",
@@ -133,16 +133,19 @@ export default class Home extends React.Component {
           // renderRightButton={() => <Text>Custom text after the input</Text>}
         />
         <ScrollView style={{ marginTop: 50 }}>
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
-          <StoreDisp />
+          {stores.map((s, i) => {
+            return (
+              <StoreDisp
+                key={i}
+                name={s.Name}
+                type={s.category}
+                street={s.Location.street}
+                city={s.Location.city}
+                time={s.picktime}
+                rating={s.rating}
+              />
+            );
+          })}
         </ScrollView>
       </View>
     );

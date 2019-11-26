@@ -13,8 +13,18 @@ class StoreDisp extends React.Component {
         <View style={styles.container}>
           <Image source={pic} style={styles.images} />
           <View style={styles.details}>
-            <Text>Store name</Text>
-            <Text style={{ marginTop: 5 }}>Store description</Text>
+            <Text style={{ fontWeight: "400", fontSize: 18 }}>
+              {this.props.name}
+            </Text>
+            <Text style={{ fontSize: 13, color: "gray" }}>
+              {this.props.type}
+            </Text>
+            <Text style={{ fontSize: 13, color: "gray" }}>
+              {this.props.street},{this.props.city}
+            </Text>
+            <Text style={{ color: "rgb(40, 77, 107)", marginTop: 5 }}>
+              Rating:{this.props.rating}
+            </Text>
           </View>
         </View>
       </TouchableWithoutFeedback>
@@ -31,12 +41,6 @@ const styles = StyleSheet.create({
     // borderWidth: 1,
     // borderColor: "black",
     marginVertical: 5
-    // shadowColor: "gray",
-    // shadowOffset: {
-    //   width: 10,
-    //   height: 10
-    // },
-    // shadowRadius: 5
   },
   images: {
     marginLeft: 10,
@@ -44,7 +48,7 @@ const styles = StyleSheet.create({
     height: 100
   },
   details: {
-    marginLeft: 20,
+    marginLeft: 10,
     marginTop: 10
   }
 });
