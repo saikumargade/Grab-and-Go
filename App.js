@@ -7,9 +7,13 @@ import Home from "./screens/Home";
 import Profile from "./screens/Profile";
 import Cart from "./screens/Cart";
 import Signin from "./screens/Signin";
+import StoreList from "./screens/StoreList";
+import StoreDisp from "./components/StoreDisp";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import isLogged from "./reducers/isLogged";
+import Payment from "./screens/Payment";
+import { Icon } from "native-base";
 
 // export default function App() {
 //   return (
@@ -29,16 +33,67 @@ import isLogged from "./reducers/isLogged";
 //   }
 // );
 const store = createStore(isLogged);
-const TabScreens = createBottomTabNavigator(
+const HomeTab = createStackNavigator(
   {
     Home: Home,
     Cart: Cart,
     Profile: Profile,
+    Signin: Signin,
+    StoreList: StoreList
+  },
+  {
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => <Icon name="home" />
+    }
+  }
+);
+const CartTab = createStackNavigator(
+  {
+    Cart: Cart,
+    Home: Home,
+    Profile: Profile,
     Signin: Signin
   },
   {
-    initialRouteName: "Home"
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => <Icon name="cart" />
+    }
   }
+);
+const ProfileTab = createStackNavigator(
+  {
+    Profile: Profile,
+    Cart: Cart,
+    Home: Home,
+    Signin: Signin
+  },
+  {
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => <Icon name="person" />
+    }
+  }
+);
+const SigninTab = createStackNavigator(
+  {
+    Signin: Signin,
+    Home: Home
+  },
+  {
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => <Icon name="person" />
+    }
+  }
+);
+const TabScreens = createBottomTabNavigator(
+  {
+    Home: HomeTab,
+    Cart: CartTab,
+    Profile: ProfileTab,
+    Signin: SigninTab
+  }
+  // {
+  //   initialRouteName: "Home"
+  // }
 );
 const Tabs = createAppContainer(TabScreens);
 
@@ -49,7 +104,6 @@ export default function App() {
     </Provider>
   );
 }
-
 // export default (
 //   <Provider store={store}>
 //     <App />

@@ -11,11 +11,11 @@ import {
   Button
 } from "native-base";
 import { Input } from "galio-framework";
-import Payment from "./Payment";
 
 export default class Signin extends React.Component {
   static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => <Icon name="person" />
+    tabBarIcon: ({ tintColor }) => <Icon name="person" />,
+    headerShown: false
   };
   render() {
     return (

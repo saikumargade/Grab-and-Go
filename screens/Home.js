@@ -11,6 +11,7 @@ import {
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import { Container, Button, Item, Input, Icon } from "native-base";
 import StoreDisp from "../components/StoreDisp";
+import { withNavigation } from "react-navigation";
 
 const homePlace = {
   description: "Home",
@@ -39,12 +40,13 @@ export default class Home extends React.Component {
   };
 
   static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => <Icon name="home" />
+    tabBarIcon: ({ tintColor }) => <Icon name="home" />,
+    headerShown: false
   };
   render() {
-    if (true) {
-      this.props.navigation.navigate("Signin");
-    }
+    // if (true) {
+    //   this.props.navigation.navigate("Signin");
+    // }
     return (
       <View style={styles.container}>
         <TouchableOpacity style={styles.topLocation}>

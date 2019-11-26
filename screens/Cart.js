@@ -4,7 +4,8 @@ import { Icon } from "native-base";
 
 export default class Cart extends React.Component {
   static navigationOptions = {
-    tabBarIcon: ({ tintColor }) => <Icon name="cart" />
+    tabBarIcon: ({ tintColor }) => <Icon name="cart" />,
+    headerShown: false
   };
   render() {
     return (

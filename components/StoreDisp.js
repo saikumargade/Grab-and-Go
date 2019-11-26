@@ -1,16 +1,23 @@
 import React from "react";
 import { StyleSheet, View, Text, Image } from "react-native";
 import pic from "../assets/icon.png";
-export default class StoreDisp extends React.Component {
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
+import { withNavigation } from "react-navigation";
+
+class StoreDisp extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Image source={pic} style={styles.images} />
-        <View style={styles.details}>
-          <Text>Store name</Text>
-          <Text style={{ marginTop: 5 }}>Store description</Text>
+      <TouchableWithoutFeedback
+        onPress={() => this.props.navigation.navigate("StoreList")}
+      >
+        <View style={styles.container}>
+          <Image source={pic} style={styles.images} />
+          <View style={styles.details}>
+            <Text>Store name</Text>
+            <Text style={{ marginTop: 5 }}>Store description</Text>
+          </View>
         </View>
-      </View>
+      </TouchableWithoutFeedback>
     );
   }
 }
@@ -41,3 +48,5 @@ const styles = StyleSheet.create({
     marginTop: 10
   }
 });
+
+export default withNavigation(StoreDisp);
