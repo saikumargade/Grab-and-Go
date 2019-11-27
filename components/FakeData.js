@@ -16,7 +16,7 @@ export default stores = [
     }
   },
   {
-    Name: "Suguna electricals",
+    Name: "Surya electricals",
     image: "",
     Location: {
       house: "1-12/4",

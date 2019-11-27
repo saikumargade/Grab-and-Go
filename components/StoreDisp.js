@@ -6,9 +6,11 @@ import { withNavigation } from "react-navigation";
 
 class StoreDisp extends React.Component {
   render() {
+    const { id } = this.props;
     return (
       <TouchableWithoutFeedback
-        onPress={() => this.props.navigation.navigate("StoreList")}
+        onPress={() =>
+          this.props.navigation.navigate("StoreList", { id: { id } })}
       >
         <View style={styles.container}>
           <Image source={pic} style={styles.images} />
@@ -49,7 +51,7 @@ const styles = StyleSheet.create({
   },
   details: {
     marginLeft: 10,
-    marginTop: 10
+    marginTop: 7
   }
 });
 

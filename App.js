@@ -12,7 +12,6 @@ import StoreDisp from "./components/StoreDisp";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 import isLogged from "./reducers/isLogged";
-import Payment from "./screens/Payment";
 import { Icon } from "native-base";
 
 // export default function App() {
@@ -39,13 +38,15 @@ const HomeTab = createStackNavigator(
     Cart: Cart,
     Profile: Profile,
     Signin: Signin,
+    StoreDisp: StoreDisp,
     StoreList: StoreList
   },
   {
     navigationOptions: {
       tabBarIcon: ({ tintColor }) => <Icon name="home" />
-    }
-  }
+    },
+    // initialRouteNa?me: true ? "Signin" : "Home"
+  },
 );
 const CartTab = createStackNavigator(
   {

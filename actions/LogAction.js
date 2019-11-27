@@ -1,6 +1,7 @@
-export default logaction = user => {
+export const logaction = user => {
   return {
     type: "SIGNIN",
     payload: user
   };
 };
+

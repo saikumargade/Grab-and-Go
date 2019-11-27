@@ -1,8 +1,10 @@
 import React from "react";
 import { Text, View, Button, StyleSheet } from "react-native";
+import { withNavigation } from "react-navigation";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 import { Icon } from "native-base";
 
-export default class Cart extends React.Component {
+class StoreList extends React.Component {
   static navigationOptions = {
     headerShown: false
   };
@@ -10,10 +12,13 @@ export default class Cart extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Store List</Text>
+        <Text>store id: {JSON.stringify(this.props.navigation.getParam("id"))}</Text>
       </View>
     );
   }
 }
+
+export default withNavigation(StoreList);
 
 const styles = StyleSheet.create({
   container: {

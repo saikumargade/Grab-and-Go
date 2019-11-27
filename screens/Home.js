@@ -12,6 +12,7 @@ import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplet
 import { Container, Button, Item, Input, Icon } from "native-base";
 import StoreDisp from "../components/StoreDisp";
 import stores from "../components/FakeData";
+import { connect } from "react-redux";
 
 const homePlace = {
   description: "Home",
@@ -22,7 +23,7 @@ const workPlace = {
   geometry: { location: { lat: 48.8496818, lng: 2.2940881 } }
 };
 
-export default class Home extends React.Component {
+class Home extends React.Component {
   state = {
     location: null
   };
@@ -44,6 +45,11 @@ export default class Home extends React.Component {
     headerShown: false
   };
   render() {
+    const { user } = this.props;
+    console.log("^^^^^^^^^^^^^^^^^6", user)
+    if (!user) {
+      this.props.navigation.navigate("Signin");
+    }
     // if (true) {
     //   this.props.navigation.navigate("Signin");
     // }
@@ -129,14 +135,15 @@ export default class Home extends React.Component {
           ]} // filter the reverse geocoding results by types - ['locality', 'administrative_area_level_3'] if you want to display only cities
           predefinedPlaces={[homePlace, workPlace]}
           debounce={200} // debounce the requests in ms. Set to 0 to remove debounce. By default 0ms.
-          // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
-          // renderRightButton={() => <Text>Custom text after the input</Text>}
+        // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
+        // renderRightButton={() => <Text>Custom text after the input</Text>}
         />
-        <ScrollView style={{ marginTop: 50 }}>
+        <ScrollView style={{ marginTop: 55 }}>
           {stores.map((s, i) => {
             return (
               <StoreDisp
                 key={i}
+                id={i}
                 name={s.Name}
                 type={s.category}
                 street={s.Location.street}
@@ -151,6 +158,13 @@ export default class Home extends React.Component {
     );
   }
 }
+const mapStateToProps = state => {
+  return {
+    user: state.user
+  };
+};
+export default connect(mapStateToProps)(Home);
+// export default Home;
 
 const styles = StyleSheet.create({
   container: {
