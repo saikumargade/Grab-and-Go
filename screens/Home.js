@@ -138,7 +138,7 @@ class Home extends React.Component {
         // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
         // renderRightButton={() => <Text>Custom text after the input</Text>}
         />
-        <ScrollView style={{ marginTop: 55 }}>
+        <ScrollView style={{ marginTop: 55 }} onScroll={() => console.log('home scrolling')}>
           {stores.map((s, i) => {
             return (
               <StoreDisp

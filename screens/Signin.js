@@ -16,7 +16,7 @@ import { connect } from "react-redux";
 
 class Signin extends React.Component {
   state = {
-    user: undefined
+    user: ''
   };
   handleName = text => {
     this.setState({ user: text });
@@ -41,7 +41,7 @@ class Signin extends React.Component {
             <Form style={{ marginLeft: 20 }}>
               {/* <Input placeholder="Username" rounded onPress={this.handleName} /> */}
               <TextInput
-                value={undefined}
+                value={this.state.user}
                 placeholder="Username"
                 onChangeText={text => this.handleName(text)}
                 style={{
@@ -67,7 +67,7 @@ class Signin extends React.Component {
                     console.log("USer", this.state.user)
                     this.props.logaction(this.state.user);
                     this.props.navigation.navigate("Home");
-                    // this.setState({ user: '' })
+                    this.setState({ user: '' })
                   }}
                 >
                   Signin

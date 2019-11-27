@@ -13,7 +13,8 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "Surya electricals",
@@ -29,23 +30,42 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
-    Name: "Arun Xerox center",
+    Name: "Navodhaya general store",
     image: "",
     Location: {
       house: "8-12/9",
       street: "Gachibowli",
       city: "Hyderabad"
     },
-    category: "Xerox,print out",
+    category: "grocery,general",
     picktime: "5",
     rating: "3.0",
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+  },
+  {
+    Name: "Pattern clothing store",
+    image: "",
+    Location: {
+      house: "6-12/5",
+      street: "Gowlidhoddi",
+      city: "Hyderabad"
+    },
+    category: "cloth materials",
+    picktime: "29",
+    rating: "3.2",
+    contact: {
+      mobile: "9677384523",
+      email: "email@example.com"
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "Srinivasa Kirana Store",
@@ -61,7 +81,8 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "Vaishnavi tiffin center",
@@ -77,23 +98,8 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
-  },
-  {
-    Name: "Udaya clothing store",
-    image: "",
-    Location: {
-      house: "6-12/5",
-      street: "Gowlidhoddi",
-      city: "Hyderabad"
     },
-    category: "cloth materials",
-    picktime: "29",
-    rating: "3.2",
-    contact: {
-      mobile: "9677384523",
-      email: "email@example.com"
-    }
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "New shopping mall",
@@ -109,7 +115,8 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "Happy Gift store",
@@ -125,7 +132,8 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "Shubham fruit store",
@@ -141,7 +149,8 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   },
   {
     Name: "Ramesh General Store",
@@ -157,6 +166,7 @@ export default stores = [
     contact: {
       mobile: "9677384523",
       email: "email@example.com"
-    }
+    },
+    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
   }
 ];
