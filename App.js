@@ -13,6 +13,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import isLogged from "./reducers/isLogged";
 import { Icon } from "native-base";
+import Signup from './screens/Signup'
 const store = createStore(isLogged);
 const HomeTab = createStackNavigator(
   {
@@ -28,12 +29,23 @@ const HomeTab = createStackNavigator(
     }
   }
 );
+const SigninTab = createStackNavigator(
+  {
+    Signin: Signin,
+    Signup: Signup
+  },
+  {
+    navigationOptions: {
+      tabBarIcon: ({ tintColor }) => <Icon name="person" />
+    }
+  }
+)
 const TabScreens = createBottomTabNavigator(
   {
     Home: HomeTab,
     Cart: Cart,
-    Profile: Profile,
-    Signin: Signin
+    // Profile: Profile,
+    Signin: SigninTab
   }
 );
 const Tabs = createAppContainer(TabScreens);

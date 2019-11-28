@@ -17,8 +17,8 @@ class ItemDisp extends React.Component {
         return (
             <View style={styles.container}>
                 <View style={{ flexDirection: 'column', top: 10, bottom: 10 }}>
-                    <Text>{this.props.name}</Text>
-                    <Text style={{ fontSize: 11, color: 'gray' }}>Price:Rs.{this.props.price}/-</Text>
+                    <Text>{this.props.item.name}</Text>
+                    <Text style={{ fontSize: 11, color: 'gray' }}>Price:Rs.{this.props.item.price}/-</Text>
                 </View>
                 <View style={{ flexDirection: 'row', marginLeft: 120, top: 18 }}>
                     {count ? <Text onPress={this.handleDecrease} style={{ marginHorizontal: 20 }}>-</Text> : null}

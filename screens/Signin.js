@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, View, StyleSheet, TextInput } from "react-native";
+import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
 import { Icon } from "native-base";
 import {
   Container,
@@ -13,6 +13,7 @@ import {
 import { Input } from "galio-framework";
 import { logaction } from "../actions/LogAction";
 import { connect } from "react-redux";
+import { Linking } from "expo";
 
 class Signin extends React.Component {
   state = {
@@ -38,7 +39,7 @@ class Signin extends React.Component {
             <Text style={{ fontSize: 20, paddingTop: 10 }}>Signin Page</Text>
           </Header>
           <Content style={{ marginTop: 100, paddingRight: 20 }}>
-            <Form style={{ marginLeft: 20 }}>
+            <Form style={{ marginLeft: 20, marginTop: 30 }}>
               {/* <Input placeholder="Username" rounded onPress={this.handleName} /> */}
               <TextInput
                 value={this.state.user}
@@ -56,7 +57,7 @@ class Signin extends React.Component {
               <Button
                 info
                 style={{
-                  marginTop: 30,
+                  marginTop: 20,
                   width: 100,
                   marginLeft: 10,
                   paddingLeft: 28
@@ -73,6 +74,12 @@ class Signin extends React.Component {
                   Signin
                 </Text>
               </Button>
+              <View style={{ flexDirection: 'row', marginLeft: 10 }}>
+                <Text style={{ color: 'gray' }}>Not an existing user?</Text>
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
+                  <Text style={{ marginLeft: 8 }}>Signup</Text>
+                </TouchableOpacity>
+              </View>
             </Form>
           </Content>
         </Container>
@@ -86,7 +93,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     justifyContent: "center",
-    marginTop: 25
+    marginTop: 24
   }
 });
 function msp(state) {

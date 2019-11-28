@@ -34,8 +34,8 @@ class StoreList extends React.Component {
             You have to pick up the order from House {stores[id].Location.house},{stores[id].Location.street},{stores[id].Location.city}
           </Text>
         </View>
-        <ScrollView onScroll={() => console.log('scrolling')} style={{ marginTop: 20 }}>
-          {stores[id].items.map((i, c) => { return (<ItemDisp key={c} name={i.name} count={i.count} price={i.price} />) })}
+        <ScrollView onScroll={() => console.log('scrolling')} style={{ marginTop: 20, height: 320 }}>
+          {stores[id].items.map((i, c) => { return (<ItemDisp key={c} storeid={id} itemid={c} item={i} name={i.name} count={i.count} price={i.price} />) })}
         </ScrollView>
       </View>
     );
@@ -50,7 +50,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#fff",
     flexDirection: 'row',
     marginTop: 45,
-    marginHorizontal: 10
+    marginHorizontal: 10,
+    height: 100
     // alignItems: "center",
     // justifyContent: "center"
   },
