@@ -22,7 +22,7 @@ export default class Signup extends React.Component {
       <View style={styles.container}>
         <Container>
           <Header>
-            <Text style={{ fontSize: 20, paddingTop: 10 }}>Sign up Page</Text>
+            <Text style={{ fontSize: 20, paddingTop: 10, color: 'white' }}>Sign up Page</Text>
           </Header>
           <Content style={{ marginTop: 100, paddingRight: 20 }}>
             <Form style={{ marginLeft: 20 }}>

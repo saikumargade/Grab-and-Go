@@ -11,13 +11,13 @@ import StoreList from "./screens/StoreList";
 import StoreDisp from "./components/StoreDisp";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import isLogged from "./reducers/isLogged";
+import reducers from "./reducers";
 import { Icon } from "native-base";
 import Signup from './screens/Signup'
-const store = createStore(isLogged);
+const store = createStore(reducers);
 const HomeTab = createStackNavigator(
   {
-    Home: Home,
+    Homes: Home,
     Cart: Cart,
     Profile: Profile,
     StoreDisp: StoreDisp,

@@ -28,7 +28,7 @@ class Signin extends React.Component {
   };
   render() {
     const { user } = this.props;
-    console.log("&&&&&&&&&&&&&", user)
+    // console.log("&&&&&&&&&&&&&", user)
     // if (user) {
     //   this.props.navigation.navigate("Home")
     // }
@@ -36,7 +36,7 @@ class Signin extends React.Component {
       <View style={styles.container}>
         <Container>
           <Header>
-            <Text style={{ fontSize: 20, paddingTop: 10 }}>Signin Page</Text>
+            <Text style={{ fontSize: 20, paddingTop: 10, color: 'white' }}>Sign in Page</Text>
           </Header>
           <Content style={{ marginTop: 100, paddingRight: 20 }}>
             <Form style={{ marginLeft: 20, marginTop: 30 }}>
@@ -67,17 +67,17 @@ class Signin extends React.Component {
                   onPress={() => {
                     console.log("USer", this.state.user)
                     this.props.logaction(this.state.user);
-                    this.props.navigation.navigate("Home");
+                    this.props.navigation.navigate("Homes");
                     this.setState({ user: '' })
                   }}
                 >
-                  Signin
+                  Sign in
                 </Text>
               </Button>
               <View style={{ flexDirection: 'row', marginLeft: 10 }}>
                 <Text style={{ color: 'gray' }}>Not an existing user?</Text>
                 <TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
-                  <Text style={{ marginLeft: 8 }}>Signup</Text>
+                  <Text style={{ marginLeft: 8 }}>Sign up</Text>
                 </TouchableOpacity>
               </View>
             </Form>

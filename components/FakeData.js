@@ -14,7 +14,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Surya electricals",
@@ -31,7 +31,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Navodhaya general store",
@@ -48,7 +48,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Pattern clothing store",
@@ -65,7 +65,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Srinivasa Kirana Store",
@@ -82,7 +82,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Vaishnavi tiffin center",
@@ -99,7 +99,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "New shopping mall",
@@ -116,7 +116,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Happy Gift store",
@@ -133,7 +133,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Shubham fruit store",
@@ -150,7 +150,7 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   },
   {
     Name: "Ramesh General Store",
@@ -167,6 +167,6 @@ export default stores = [
       mobile: "9677384523",
       email: "email@example.com"
     },
-    items: [{ name: 'Item1', count: '0', measure: '', price: '79' }, { name: 'Item2', count: '0', measure: '', price: '99' }, { name: 'Item3', count: '0', measure: '', price: '55' }, { name: 'Item4', count: '0', measure: '', price: '32' }, { name: 'Item5', count: '0', measure: '', price: '99' }]
+    items: [{ name: 'Item1', count: 0, measure: '', price: '79' }, { name: 'Item2', count: 0, measure: '', price: '99' }, { name: 'Item3', count: 0, measure: '', price: '55' }, { name: 'Item4', count: 0, measure: '', price: '32' }, { name: 'Item5', count: 0, measure: '', price: '99' }]
   }
 ];
