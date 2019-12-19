@@ -46,7 +46,7 @@ class Home extends React.Component {
   };
   render() {
     const { user } = this.props;
-    console.log("^^^^^^^^^^^^^^^^^6", user)
+    // console.log("^^^^^^^^^^^^^^^^^6", user)
     if (!user) {
       this.props.navigation.navigate("Signin");
     }
@@ -96,7 +96,7 @@ class Home extends React.Component {
           renderDescription={row => row.description} // custom description render
           onPress={(data, details = null) => {
             // 'details' is provided when fetchDetails = true
-            console.log(data, details);
+            // console.log(data, details);
           }}
           getDefaultValue={() => ""}
           query={{
@@ -135,8 +135,8 @@ class Home extends React.Component {
           ]} // filter the reverse geocoding results by types - ['locality', 'administrative_area_level_3'] if you want to display only cities
           predefinedPlaces={[homePlace, workPlace]}
           debounce={200} // debounce the requests in ms. Set to 0 to remove debounce. By default 0ms.
-        // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
-        // renderRightButton={() => <Text>Custom text after the input</Text>}
+          // renderLeftButton={()  => <Image source={require('path/custom/left-icon')} />}
+          // renderRightButton={() => <Text>Custom text after the input</Text>}
         />
         <ScrollView style={{ marginTop: 55, marginBottom: 10 }}>
           {stores.map((s, i) => {
