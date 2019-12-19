@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, View, StyleSheet, TextInput, TouchableOpacity } from "react-native";
+import {
+  Text,
+  View,
+  StyleSheet,
+  TextInput,
+  TouchableOpacity
+} from "react-native";
 import { Icon } from "native-base";
 import {
   Container,
@@ -17,7 +23,7 @@ import { Linking } from "expo";
 
 class Signin extends React.Component {
   state = {
-    user: ''
+    user: ""
   };
   handleName = text => {
     this.setState({ user: text });
@@ -36,7 +42,9 @@ class Signin extends React.Component {
       <View style={styles.container}>
         <Container>
           <Header>
-            <Text style={{ fontSize: 20, paddingTop: 10, color: 'white' }}>Sign in Page</Text>
+            <Text style={{ fontSize: 20, paddingTop: 10, color: "white" }}>
+              Sign in Page
+            </Text>
           </Header>
           <Content style={{ marginTop: 100, paddingRight: 20 }}>
             <Form style={{ marginLeft: 20, marginTop: 30 }}>
@@ -65,18 +73,20 @@ class Signin extends React.Component {
               >
                 <Text
                   onPress={() => {
-                    console.log("USer", this.state.user)
+                    // console.log("USer", this.state.user)
                     this.props.logaction(this.state.user);
                     this.props.navigation.navigate("Homes");
-                    this.setState({ user: '' })
+                    this.setState({ user: "" });
                   }}
                 >
                   Sign in
                 </Text>
               </Button>
-              <View style={{ flexDirection: 'row', marginLeft: 10 }}>
-                <Text style={{ color: 'gray' }}>Not an existing user?</Text>
-                <TouchableOpacity onPress={() => this.props.navigation.navigate('Signup')}>
+              <View style={{ flexDirection: "row", marginLeft: 10 }}>
+                <Text style={{ color: "gray" }}>Not an existing user?</Text>
+                <TouchableOpacity
+                  onPress={() => this.props.navigation.navigate("Signup")}
+                >
                   <Text style={{ marginLeft: 8 }}>Sign up</Text>
                 </TouchableOpacity>
               </View>
@@ -99,7 +109,7 @@ const styles = StyleSheet.create({
 function msp(state) {
   return {
     user: state.user
-  }
+  };
 }
 // export default Signin;
 export default connect(msp, { logaction })(Signin);
